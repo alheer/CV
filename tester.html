@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume/CV Alexander Heer</title>
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #585c68;
+  font-size: 12px;
+  line-height: 21px;
+  color: #555555;
+}
+
+span {
+        padding-left: 25px;
+        text-indent:-2px;
+    }
+
+
+.bold {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.bold2 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.bold3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.boldr {
+  font-weight: 500;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.boldr2 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  margin-top: -20px;
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.semi-bold2 {
+  font-weight: 500;
+  font-size: 12px;
+}
+.semi-bold3 {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.gapline {
+  font-weight: 500;
+  font-size: 1px;
+}
+
+.resume {
+  width: 21cm;
+  height: 28.7cm;
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm pbga(0,0,0,0.5);
+}
+
+.resume .resume_left {
+  width: 6cm;
+  background: #4D4D4D;
+}
+
+.resume .resume_left .resume_profile {
+  width: 100%;
+  height: 210px;
+}
+
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+
+.resume .title {
+  margin-bottom: 12px;
+}
+
+.resume .resume_left .bold {
+  color: #B29155;
+}
+
+.resume .resume_left .bold3 {
+  color: #B29155;
+}
+
+.resume .resume_left .regular {
+  color: #FBFAF7;
+}
+
+.resume .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #B29155;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+.resume .resume_left ul li {
+  display: flex;
+  margin-bottom: 3px;
+  align-items: center;
+}
+
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #B29155;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resume .resume_left ul li .data {
+  color: #FBFAF7;
+}
+
+.resume .resume_left .resume_skills ul li {
+  display: flex;
+  margin-bottom: 5px;
+  color: #FBFAF7;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 35%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 65%;
+  margin: 0 5px;
+  height: 5px;
+  background: #967944;
+  position: relative;
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.resume .resume_left .resume_social .semi-bold {
+  color: #B29155;
+  margin-bottom: 10px;
+}
+
+.resume .resume_right {
+  width: 15cm;
+  background: #fff;
+  padding: 25px;
+}
+
+.resume .resume_right .bold3 {
+  color: #B29155;
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 30px;
+  overflow: hidden;
+}
+
+.resume .resume_right ul li {
+  position: relative;
+}
+
+.resume .resume_right ul li .date {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.resume .resume_right ul li .info {
+  margin-bottom: 12px;
+}
+
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #B29155;
+  background-color: #fff ;
+}
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 135px;
+  background: #B29155;
+}
+
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .resume_right .resume_hobby ul li {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #B29155;
+  border-radius: 50%;
+  position: relative;
+  color: #B29155;
+  background-color: #B29155 ;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 19px;
+  height: 2px;
+  background: #B29155;
+}
+
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+
+</style>
+<body>
+
+<div class="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+       <img src="profile.png" alt="profile_pic">
+     </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+           <p class="bold3">Contact</p>
+         </div>
+         <ul>
+           <li>
+             <div class="data">
+               Limmattalstrasse 105, Zürich 
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               +41 76 310 23 82
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               alexander.heer@gmail.com
+             </div>
+           </li>
+           <li>
+              <div class="data">
+                  <p>Alexander@linkedin</p>
+             </div>
+            </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold3">Computer Skills</p>
+         </div>
+         <ul>
+           <li>
+             <div class="skill_name">
+               R
+             </div>
+             <div class="skill_progress">
+               <span style="width: 80%;"></span>
+             </div>
+           </li>
+           <li>
+             <div class="skill_name">
+               Python
+             </div>
+             <div class="skill_progress">
+               <span style="width: 60%;"></span>
+             </div>
+           </li>
+           <li>
+             <div class="skill_name">
+               MS Office
+             </div>
+             <div class="skill_progress">
+               <span style="width: 80%;"></span>
+             </div>
+           </li>
+           <li>
+             <div class="skill_name">
+               Bash
+             </div>
+             <div class="skill_progress">
+               <span style="width: 60%;"></span>
+             </div>
+           </li>
+           <li>
+             <div class="skill_name">
+               SQL
+             </div>
+             <div class="skill_progress">
+               <span style="width: 30%;"></span>
+             </div>
+           </li>
+         </ul>
+       </div>
+              <div class="resume_item resume_info">
+         <div class="title">
+           <p class="bold3">Languages</p>
+         </div>
+         <ul>
+           <li>
+            <div class="data">
+               German (native)
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               English (proficient)
+             </div>
+           </li> 
+           <li>
+             <div class="data">
+               French (basic)
+             </div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold3">Interests</p>
+         </div>
+         <ul>
+           <li>
+             <div class="data">
+               <p>▪ Reading</p>
+             </div>
+           </li>
+            <li>
+             <div class="data">
+               <p>▪ Scouts</p>
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               <p>▪ Sport</p>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+          <ul>
+            <li>
+              <p class="boldr2">Curriculum Vitae</p>
+            </li>
+            <li>
+              <p class="boldr">Alexander Heer</p>
+            </li>
+          </ul>
+         </div>
+  </div>       
+    <div class="resume_item resume_education">
+        <div class="title">
+           <p class="bold3">Education</p>
+         </div>
+        <ul>
+            <li>
+                <div class="date"><b>2019 - 2022</b></div> 
+                <div class="info">
+                     <p class="semi-bold"><b>M.Sc. in Biology and Minor degree in Bioinfomratics</b></p> 
+                     <p class="semi-bold3">University of Zurich, Switzerland</p>
+                    <p class="semi-bold2">▪ Master with a focus on Anthropology and Evolutionary Genetics <br>
+                     ▪ M.Sc. Thesis (Grade: 5.25): <i>“Identification of Y-chromosomal genetic markers in &nbsp;&nbsp;Indo-Pacific bottlenose dolphins (Tursiops aduncus)”</i></p>
+                </div>
+            </li>
+            <li>
+              <div class="date"><b>2014 - 2019</b></div>
+              <div class="info">
+                     <p class="semi-bold"><b>Bachelor of Science in Biology</b></p> 
+                     <p class="semi-bold3">University of Zurich, Switzerland</p> 
+                  <p class="semi-bold2">▪ Principles of Evolution Project (Grade 5.5): <i>“Properties of genotype networks &nbsp;&nbsp;for whole-organism phenotypes in Arabidopsis thaliana”</i><br>
+                     ▪ Experimental Field Biology Projects in Oulanka National Park, Finland:</p>
+                        <p class= "semi-bold2">&nbsp;&nbsp;&nbsp;&nbsp;▪ <i>“Tree-size Preference in Woodpecker Foraging”</i> <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;▪ <i>“Effects of Hiking Trail Usage on the adjacent Plant Species”</i></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_work">
+      <div class="title">
+           <p class="bold3">Professional Experience</p>
+         </div>
+      <ul>
+            <li>
+                <div class="date"><b>2020 - 2021</b></div> 
+                <div class="info">
+                     <p class="semi-bold"><b>Museum Attendant</b></p> 
+                     <p class="semi-bold3">Museum of Anthropology & Science Exploratorium UZH</p>
+                  <p class="semi-bold2">▪ Administrative role and independent preparation and execution of tours for &nbsp;&nbsp;school classes as well as other groups<br>
+                </div>
+            </li>
+            <li>
+              <div class="date"><b>2018 - today</b></div>
+              <div class="info">
+                     <p class="semi-bold"><b>Regional Training Supervisor</b></p> 
+                     <p class="semi-bold3">The Swiss Guide and Scout Movement (MSdS) and Jugend+Sport</p> 
+                  <p class="semi-bold2">▪ Supervising, planning and leading weeklong educational workshops for &nbsp;&nbsp;around 150 scout leaders per year<br>
+                     ▪ Certified J+S Eexpert for Camping Sports/Trekking
+                  </div>
+            </li>
+            <li>
+              <div class="date"><b>2017 - 2020</b></div>
+              <div class="info">
+                     <p class="semi-bold"><b>Gelatieri</b></p> 
+                     <p class="semi-bold3">Gelateria di Berna</p> 
+                  <p class="semi-bold2">▪ Serving 300+ customers a day to satisfy the high demand for one of the most &nbsp;&nbsp;popular gelaterias in Switzerland<br>
+                     ▪ Daily accounting and cash closing responsabilities</p>
+                </div>
+                <li>
+              <div class="date"><b>2018 - 2019</b></div>
+              <div class="info">
+                     <p class="semi-bold"><b>House Representative</b></p> 
+                     <p class="semi-bold3">Student Housing Cooperative (WOKO)</p> 
+                  <p class="semi-bold2">▪ Responsible for the administration of an apartment complex of 14 flats housing 86 students<br>
+                </div>
+            </li>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>
+</page>
+</body>
+</html>
